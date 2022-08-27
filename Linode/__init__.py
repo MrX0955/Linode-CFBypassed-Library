@@ -4,8 +4,6 @@ from bs4 import BeautifulSoup
 def linode(username,password):
     scraper = cfscrape.create_scraper()
 
-    #cookie_arg, user_agentt = cfscrape.get_cookie_string("https://login.linode.com/login")
-
     req = scraper.get("https://login.linode.com/login")
     soup = BeautifulSoup(req.content, 'html.parser')
     title = soup.find(type="hidden")
