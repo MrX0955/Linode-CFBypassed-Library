@@ -6,8 +6,7 @@ def linode(username,password):
 
     req = scraper.get("https://login.linode.com/login")
     soup = BeautifulSoup(req.content, 'html.parser')
-    title = soup.find(type="hidden")
-    TK = title.attrs.get('value')
+    TK = soup.input["value"]
 
     datas = f"csrf_token={TK}&return_to=https%3A%2F%2Flogin.linode.com%2F&created=2021-03-21T07%3A43%3A43.668635&username={username}&password={password}&submit=Oturum+a%C3%A7"
 
