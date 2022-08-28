@@ -16,7 +16,6 @@ def linode(username,password):
     }
 
     req = scraper.post("https://login.linode.com/login", data=datas, headers=headerss, allow_redirects=False).text
-    print(req)
     if "<li>Username or password incorrect.</li>" in req:
         print(f"Wrong Credentials >> {username}:{password}")
     elif "You should be redirected automatically to target URL: <a href=\"https://login.linode.com/\">https://login.linode.com/</a>." in req:
