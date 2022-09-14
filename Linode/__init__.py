@@ -1,8 +1,8 @@
-import cfscrape
+import cloudscraper
 from bs4 import BeautifulSoup
 
 def linode(username,password):
-    scraper = cfscrape.create_scraper()
+    scraper = cloudscraper.create_scraper()
 
     req = scraper.get("https://login.linode.com/login")
     soup = BeautifulSoup(req.content, 'html.parser')
