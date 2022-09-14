@@ -1,3 +1,3 @@
 pip install bs4
-pip install cfscrape
+pip install cloudscraper
 exit
